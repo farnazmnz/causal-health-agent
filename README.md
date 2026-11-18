@@ -3,6 +3,8 @@
 **From Wearable Sensor Anomalies to Evidence-Grounded Explanations**
 Farnaz Sadat Mirnezami, Heidar Davoudi, Ali Neshati, Ontario Tech University
 
+**Accepted at IEEE Big Data 2026**
+
 Smartwatches tell you *what* changed (resting heart rate rose, sleep dropped). Causal Health Agent
 asks *what may have contributed*, *how did it evolve over time*, and *is there medical evidence for it?*
 It detects personal anomalies, builds a participant-specific **lag-aware causal graph**, ranks the
@@ -87,15 +89,6 @@ pick   = s3.select_root_cause(G, "resting_hr")                # top-ranked causa
 
 *Left: VARLiNGAM graph for participant p01 (colour = lag, label = effect strength). Right: a generated, evidence-grounded explanation.*
 
-## Notes and limitations
-
-- Hyper-parameters the paper does not state are marked `ASSUMPTION` in `causal_health_agent/config.py` (Z-score threshold 2.5, VARLiNGAM edge cut-off 0.15, ...).
-- OpenRouter model slugs (especially Qwen3.7-Max) must be checked against your account; the paper names models, not slugs.
-- No ground-truth causal graphs exist for PMData: discovered pathways are **data-driven hypotheses, not clinical conclusions**. Stage 3's evaluation measures ranking self-consistency (the reference graph is itself RCRS-ranked).
-- Edges among derived or time-budget-sharing features (sleep score, activity minutes) can reflect measurement construction rather than physiology.
-- Neural detectors calibrate their threshold on a held-out slice of the first 50% of history; on real PMData the autoencoder-family models still flag more days than the paper's Table II, so treat their numbers as indicative.
-- The Chronos detector and the RAGAS evaluation need optional dependencies and are not covered by the offline tests.
-
 ## Citation
 
-If you use this code, please cite the paper: *Causal Health Agent: From Wearable Sensor Anomalies to Evidence-Grounded Explanations* (Mirnezami, Davoudi, Neshati).
+If you use this code, please cite the paper (accepted at IEEE Big Data 2026): *Causal Health Agent: From Wearable Sensor Anomalies to Evidence-Grounded Explanations* (Mirnezami, Davoudi, Neshati).
