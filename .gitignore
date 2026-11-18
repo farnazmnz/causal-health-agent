@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+# secrets
+.env
+*.key
+# generated outputs and caches (never committed)
+outputs/
+tavily_cache.json
+stage*_verified*.json
+stage*_narratives*.json
+stage*_judged*.csv
+table*.csv
+graph_p*.png
+# raw data (large, not redistributable here)
+data/
+PMData/
+*.zip

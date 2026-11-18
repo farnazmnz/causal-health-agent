@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+networkx
+matplotlib
+openpyxl
+tigramite            # PCMCI
+lingam               # VARLiNGAM
+torch                # neural detectors (LSTM, AE, LSTM-AE, TranAD)
+openai               # OpenRouter client (Stages 4-6)
+tavily-python        # Stage 5 retrieval
+pytest
+# optional
+# chronos-forecasting   # Stage 1 Chronos detector
+# ragas langchain-openai # Table VI evaluation (causal_health_agent/evaluation/ragas_eval.py)
