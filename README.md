@@ -1,6 +1,7 @@
 # Causal Health Agent
 
 **From Wearable Sensor Anomalies to Evidence-Grounded Explanations**
+
 Farnaz Sadat Mirnezami, Heidar Davoudi, Ali Neshati, Ontario Tech University
 
 **Accepted at IEEE Big Data 2026**
